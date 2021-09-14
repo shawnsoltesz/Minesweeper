@@ -1,12 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
   --header-background: #028e20;
   --header-text-color: #fff9c2;
-  --header-font-size: 2rem;
+  --header-font-size: 3rem;
   --square-font-size: calc(8 * var(--header-font-size));
   --square-text-color: #b39a56;
   --square-background-color: #b2dd98;
   --square-border: 3px solid var(--square-text-color);
+  --easy-cell-size: 3rem;
+  --easy-board-size: 8;
+
+  --intermediate-cell-size: 2rem;
+  --intermediate-board-size: 16;
+
+  --expert-cell-size: 1.5rem;
+  --expert-board-size: 24;
 }
 
 html {
@@ -15,9 +25,18 @@ html {
 
 body {
   margin: 0;
-  min-height: auto;
+  height: 100%;
   max-width: fit-content;
   max-height: fit-content;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4ecd6;
 }
 
 h1 {
@@ -25,77 +44,89 @@ h1 {
   text-align: center;
 
   /* Use a sans serif font with a little spacing and color */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Jolly Lodger', cursive;
   letter-spacing: 0.4rem;
   font-size: var(--header-font-size);
   color: var(--header-text-color);
 
   /* Remove margins and set a little padding */
   margin: 0;
-  padding: var(--header-font-size);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
   /* Set a background color for the header */
   background-color: var(--header-background);
 }
 
-ul,
-li {
-  /* Be gone margins! */
+section {
+  list-style: none;
   margin: 0;
   padding: 0;
-
-  /* and list styles */
-  list-style: none;
-}
-
-ul {
-  /* Make the height of the list equal to the height of the page MINUS the height taken by the header */
-  height: auto;
-
-  /* Display the list as a 3 column and three row grid */
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-  /* Add a little gap between to allow the background color through */
-  gap: 0.5rem;
-
-  /* Set the background color that will show through the gap */
-  background-color: var(--square-text-color);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 
-ul li {
-  /* Use a monospace font */
-  font-family: monospace;
-  font-size: var(--square-font-size);
+section.difficulty-0 {
+  grid-template-columns: repeat(var(--easy-board-size), 1fr);
+  grid-template-rows: repeat(var(--easy-board-size), 1fr);
+  width: calc(var(--easy-board-size) * var(--easy-cell-size));
+  height: calc(var(--easy-board-size) * var(--easy-cell-size));
+}
 
-  /* Style the background color of the item */
-  background-color: var(--square-background-color);
+section.difficulty-1 {
+  grid-template-columns: repeat(var(--intermediate-board-size), 1fr);
+  grid-template-rows: repeat(var(--intermediate-board-size), 1fr);
+  width: calc(var(--intermediate-board-size) * var(--intermediate-cell-size));
+}
 
-  /* Make the cursor a pointer by default */
-  cursor: pointer;
+section.difficulty-2 {
+  grid-template-columns: repeat(var(--expert-board-size), 1fr);
+  grid-template-rows: repeat(var(--expert-board-size), 1fr);
+  width: calc(var(--expert-board-size) * var(--expert-cell-size));
+}
 
-  /* Center the text in the LI */
+section button {
+  margin: 0;
+  padding: 0.5;
+  background-color: rgba(50, 188, 105, 0.359);
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Don't let the squares become too small */
-  min-width: 3rem;
-  min-height: 5rem;
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
 }
 
-ul li.taken {
-  cursor: not-allowed;
+section.difficulty-0 button {
+  width: var(--easy-cell-size);
+  height: var(--easy-cell-size);
 }
 
-ul li.small {
-  font-size: 4rem;
+section.difficulty-1 button {
+  width: var(--intermediate-cell-size);
+  height: var(--intermediate-cell-size);
 }
 
-ul li.not-allowed-click {
-  background-color: red;
+section.difficulty-2 buttonli {
+  width: var(--expert-cell-size);
+  height: var(--expert-cell-size);
+}
+
+button.cell-number {
+  color: rgb(0, 0, 0);
+}
+
+button.cell-bomb {
+  background-color: rgba(251, 102, 48, 0.66);
+  color: rgb(0, 0, 0);
+}
+
+button.cell-flag {
+  background-color: rgba(238, 218, 102, 0.825);
+  color: rgb(0, 0, 0);
+}
+
+button.cell-free {
+  background-color: rgb(47, 209, 52);
 }
