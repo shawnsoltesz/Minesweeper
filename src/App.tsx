@@ -10,6 +10,7 @@ export function App() {
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
     ],
     id: null,
     winner: null,
@@ -143,6 +144,14 @@ export function App() {
           <li onClick={() => handleClickCell(6, 5)}>{game.board[6][5]}</li>
           <li onClick={() => handleClickCell(6, 6)}>{game.board[6][6]}</li>
           <li onClick={() => handleClickCell(6, 7)}>{game.board[6][7]}</li>
+          <li onClick={() => handleClickCell(7, 0)}>{game.board[6][0]}</li>
+          <li onClick={() => handleClickCell(7, 1)}>{game.board[6][1]}</li>
+          <li onClick={() => handleClickCell(7, 2)}>{game.board[6][2]}</li>
+          <li onClick={() => handleClickCell(7, 3)}>{game.board[6][3]}</li>
+          <li onClick={() => handleClickCell(7, 4)}>{game.board[6][4]}</li>
+          <li onClick={() => handleClickCell(7, 5)}>{game.board[6][5]}</li>
+          <li onClick={() => handleClickCell(7, 6)}>{game.board[6][6]}</li>
+          <li onClick={() => handleClickCell(7, 7)}>{game.board[6][7]}</li>
         </ul>
       </div>
     )
