@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
-
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css';
 :root {
   font: 16px / 1 sans-serif;
   --header-background: #028e20;
@@ -7,7 +7,7 @@
   --header-font-size: 3rem;
   --square-font-size: calc(8 * var(--header-font-size));
   --square-text-color: #b39a56;
-  --square-background-color: #b2dd98;
+  --square-background-color: #98abdd;
   --square-border: 3px solid var(--square-text-color);
   --easy-cell-size: 3rem;
   --easy-board-size: 8;
@@ -129,4 +129,8 @@ button.cell-flag {
 
 button.cell-free {
   background-color: rgb(47, 209, 52);
+}
+
+button.cell-number {
+  color: rgb(0, 0, 0);
 }
