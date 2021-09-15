@@ -40,24 +40,23 @@ main {
 }
 
 h1 {
-  /* center the header */
   text-align: center;
-
-  /* Use a sans serif font with a little spacing and color */
   font-family: 'Jolly Lodger', cursive;
   letter-spacing: 0.4rem;
   font-size: var(--header-font-size);
   color: var(--header-text-color);
-
-  /* Remove margins and set a little padding */
   margin: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 5rem;
   padding-right: 5rem;
-
-  /* Set a background color for the header */
   background-color: var(--header-background);
+}
+
+h2 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
@@ -118,7 +117,7 @@ button.cell-number {
 }
 
 button.cell-bomb {
-  background-color: rgba(251, 102, 48, 0.66);
+  background-color: rgba(251, 102, 48, 0.907);
   color: rgb(0, 0, 0);
 }
 
@@ -128,9 +127,30 @@ button.cell-flag {
 }
 
 button.cell-free {
-  background-color: rgb(47, 209, 52);
+  background-color: rgb(176, 160, 81);
 }
 
-button.cell-number {
-  color: rgb(0, 0, 0);
+.difficulty-0 button.cell-number {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.difficulty-1 button.cell-number {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.difficulty-2 button.cell-number {
+  font-weight: bold;
+  font-size: 1rem;
+}
+button.cell-1 {
+  background-color: rgb(147, 134, 67);
+}
+
+button.cell-2 {
+  background-color: rgb(132, 124, 87);
+}
+
+button.cell-3 {
+  background-color: rgb(133, 115, 21);
 }
