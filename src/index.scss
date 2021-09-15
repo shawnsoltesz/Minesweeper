@@ -11,23 +11,14 @@
   --square-border: 3px solid var(--square-text-color);
   --easy-cell-size: 3rem;
   --easy-board-size: 8;
-
   --intermediate-cell-size: 2rem;
   --intermediate-board-size: 16;
-
   --expert-cell-size: 1.5rem;
   --expert-board-size: 24;
 }
 
 html {
   height: 100%;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-  max-width: fit-content;
-  max-height: fit-content;
 }
 
 main {
@@ -51,12 +42,6 @@ h1 {
   padding-left: 5rem;
   padding-right: 5rem;
   background-color: var(--header-background);
-}
-
-h2 button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 section {
@@ -153,4 +138,9 @@ button.cell-2 {
 
 button.cell-3 {
   background-color: rgb(133, 115, 21);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
 }

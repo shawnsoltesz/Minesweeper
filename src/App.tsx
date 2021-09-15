@@ -105,13 +105,18 @@ export function App() {
   return (
     <main>
       <h1>Mine Sweeper</h1>
+      <p>
+        <strong>Instructions:</strong> Click the button and start a game. Have
+        fun!
+      </p>
       <h2>
-        <button onClick={() => newGame(0)}>New Easy Game</button>
-        <button onClick={() => newGame(1)}>New Intermediate Game</button>
-        <button onClick={() => newGame(2)}>New Difficult Game</button>
+        <button onClick={() => newGame(0)}>Start A New Game</button>
+        {/* <button onClick={() => newGame(1)}>New Intermediate Game</button>
+        <button onClick={() => newGame(2)}>New Difficult Game</button> */}
       </h2>
-      <h3>Mines: {game.mines}</h3>
-      <h3>Game #: {game.id}</h3>
+
+      <h3>Number of Mines: {game.mines}</h3>
+      <h3>Game # {game.id}</h3>
 
       <section className={`difficulty-${difficulty}`}>
         {game.board.map(function (gameRow, row) {
@@ -136,6 +141,9 @@ export function App() {
           })
         })}
       </section>
+      <footer>
+        <p>Built with ♥ in St. Petersburg, Florida.</p>
+      </footer>
     </main>
   )
 }
