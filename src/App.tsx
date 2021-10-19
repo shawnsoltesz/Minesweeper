@@ -97,22 +97,23 @@ export function App() {
         return undefined
 
       default:
-        // Must be a 1,2,3,etc
         return `cell-number cell-${value}`
     }
   }
 
   return (
     <main>
-      <h1>Mine Sweeper</h1>
+      <h1>Minesweeper</h1>
       <p>
-        <strong>Instructions:</strong> Click the button and start a game. Have
-        fun!
+        <strong>Instructions:</strong> Select the difficulty level and start a
+        game. Have fun!
       </p>
       <h2>
-        <button onClick={() => newGame(0)}>Start A New Game</button>
-        {/* <button onClick={() => newGame(1)}>New Intermediate Game</button>
-        <button onClick={() => newGame(2)}>New Difficult Game</button> */}
+        <button onClick={() => newGame(0)}>New Easy Game</button>
+        <button className="new-game" onClick={() => newGame(1)}>
+          New Intermediate Game
+        </button>
+        <button onClick={() => newGame(2)}>New Difficult Game</button>
       </h2>
 
       <h3>Number of Mines: {game.mines}</h3>
@@ -142,7 +143,10 @@ export function App() {
         })}
       </section>
       <footer>
-        <p>Built with ♥ in St. Petersburg, Florida.</p>
+        <p>
+          Built with <i className="heart fa fa-heart"></i> in St. Petersburg,
+          Florida.
+        </p>
       </footer>
     </main>
   )

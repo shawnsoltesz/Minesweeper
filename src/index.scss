@@ -2,11 +2,11 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css';
 :root {
   font: 16px / 1 sans-serif;
-  --header-background: #028e20;
-  --header-text-color: #fff9c2;
+  --header-background: #131959;
+  --header-text-color: #e4e1c1;
   --header-font-size: 3rem;
   --square-font-size: calc(8 * var(--header-font-size));
-  --square-text-color: #b39a56;
+  --square-text-color: #b6ac91;
   --square-background-color: #98abdd;
   --square-border: 3px solid var(--square-text-color);
   --easy-cell-size: 3rem;
@@ -27,7 +27,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f4ecd6;
+  background-color: #76bed8;
 }
 
 h1 {
@@ -42,6 +42,11 @@ h1 {
   padding-left: 5rem;
   padding-right: 5rem;
   background-color: var(--header-background);
+}
+
+.new-game {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 section {
@@ -73,7 +78,7 @@ section.difficulty-2 {
 section button {
   margin: 0;
   padding: 0.5;
-  background-color: rgba(50, 188, 105, 0.359);
+  background-color: rgba(58, 111, 79, 0.359);
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -92,7 +97,7 @@ section.difficulty-1 button {
   height: var(--intermediate-cell-size);
 }
 
-section.difficulty-2 buttonli {
+section.difficulty-2 button {
   width: var(--expert-cell-size);
   height: var(--expert-cell-size);
 }
@@ -107,12 +112,12 @@ button.cell-bomb {
 }
 
 button.cell-flag {
-  background-color: rgba(238, 218, 102, 0.825);
+  background-color: rgba(154, 245, 236, 0.825);
   color: rgb(0, 0, 0);
 }
 
 button.cell-free {
-  background-color: rgb(176, 160, 81);
+  background-color: rgb(16, 23, 63);
 }
 
 .difficulty-0 button.cell-number {
@@ -143,4 +148,8 @@ footer {
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
+
+  .heart {
+    color: rgb(176, 11, 11);
+  }
 }
